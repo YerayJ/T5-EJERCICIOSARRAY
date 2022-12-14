@@ -11,10 +11,10 @@ public class Main {
         // Creamos escaner para pedir datos al usuario
         Scanner key = new Scanner(System.in);
 
-        // Variable para saber cuál es el número mayor
-        double max;
-        // Variable para saber cuál es el número menor
-        double min;
+        // Variable para saber cuál es el número mayor, le damos valor mínimo de double
+        double max = Double.MIN_VALUE;
+        // Variable para saber cuál es el número menor, le damos valor máximo de double
+        double min = Double.MAX_VALUE;
 
         // Bucle que recorre la tabla
         for (int i = 0; i < numReales.length; i++) {
@@ -22,10 +22,7 @@ public class Main {
             numReales[i] = key.nextDouble();
         }
 
-        // Las variables tomar el valor de inicio del primer valor del array
-        max = numReales[0];
-        min = numReales[0];
-
+        // Foreach de la tabla numeros
         for (double numeros : numReales) {
             // If que comprueba que número es mayor, lo compara con la i actual y si es
             // mayor se le asigna a la variable max
